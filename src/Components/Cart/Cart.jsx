@@ -90,7 +90,6 @@ import {
     return (
       <>
         <Box className="cart">
-          {/* TODO: CRIO_TASK_MODULE_CART - Display view for each cart item with non-zero quantity */}
             {items.map((item)=>(
               <Box key={items.productId}>
                 {item.qty>0 ? (

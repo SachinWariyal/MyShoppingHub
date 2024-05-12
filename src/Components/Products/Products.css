@@ -68,6 +68,7 @@
     }
     .search-desktop {
       display: block !important;
+      background-color: white !important;
     }
   }
   

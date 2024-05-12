@@ -15,7 +15,7 @@ const Header = () => {
                   history.push('/')
                 }}
               >
-                Back to explore
+                Back to Products
 
         </Button>
     </Box>

@@ -167,11 +167,11 @@ const Products = () => {
 
   return (
     <div>
-      <Header>
+      <Header/>
         <TextField
         className="search-desktop"
         size="small"
-        // fullWidth
+        fullWidth
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
@@ -187,7 +187,6 @@ const Products = () => {
           
         }}
       />
-      </Header>
 
       {/* Search view for mobiles */}
       <TextField
@@ -233,7 +232,7 @@ const Products = () => {
                     await addToCart(
                       token,
                       items,
-                      products,
+                      product,
                       product._id,
                       1,
                       { preventDuplicate: true }
