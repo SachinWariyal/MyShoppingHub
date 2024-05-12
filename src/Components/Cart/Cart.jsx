@@ -1,16 +1,15 @@
-import PropTypes from 'prop-types';
-import {
-    AddOutlined,
-    RemoveOutlined,
-    ShoppingCart,
-    ShoppingCartOutlined,
-  } from "@mui/icons-material";
-  import { Button, IconButton, Stack } from "@mui/material";
-  import { Box } from "@mui/system";
-//   import { useHistory } from "react-router-dom";
-  // import { Link } from 'react-router-dom';
-  import "./Cart.css";
- 
+import PropTypes from 'prop-types'; 
+import { 
+    AddOutlined, 
+    RemoveOutlined, 
+    ShoppingCart, 
+    ShoppingCartOutlined, 
+  } from "@mui/icons-material"; 
+  import { Button, IconButton, Stack } from "@mui/material"; 
+  import { Box } from "@mui/system"; 
+//   import { useHistory } from "react-router-dom"; 
+  import "./Cart.css"; 
+  
   export const generateCartItemsFrom = (cartData, productsData) => {
   
       if(!cartData) return;
@@ -24,34 +23,32 @@ import {
       return nextCart
   };
   
-  /**
-   * Get the total value of all products added to the cart
-   */
+ 
   export const getTotalCartValue = (items = []) => {
-    if(!items.length) return 0;
-    const total = items.reduce((total,current)=>total+(current.cost * current.qty), 0);
-    return total;
+    if(!items.length)  return 0;
+    const total =  items.reduce((total,current)=>total+(current.cost * current.qty), 0);
+    return total; 
   };
   
   export const getTotalItems = (items = []) => {
-    if(!items.length) return 0;
-    const total = items.reduce((total,current)=>total+(current.qty), 0);
-    return total;
+    if(!items.length) return 0; 
+    const total = items.reduce((total,current)=>total+(current.qty), 0); 
+    return total; 
   };
-  const ItemQuantity = ({
-    value,
+const ItemQuantity = ({
+    value, 
     handleAdd,
-    handleDelete,
-    isReadOnly
+    handleDelete, 
+    isReadOnly 
   }) => {
     if(isReadOnly){
       return <Box>Qty:{value}</Box>
-    }
+    } 
     return (
-      <Stack direction="row" alignItems="center">
-        <IconButton size="small" color="primary" onClick={handleDelete}>
-          <RemoveOutlined />
-        </IconButton>
+      <Stack direction="row" alignItems="center"> 
+        <IconButton size="small" color="primary" onClick={handleDelete}> 
+          <RemoveOutlined /> 
+        </IconButton> 
         <Box padding="0.5rem" data-testid="item-qty">
           {value}
         </Box>
@@ -230,4 +227,6 @@ import {
     isReadOnly: PropTypes.bool,
   };
   export default Cart;
+  
+
   

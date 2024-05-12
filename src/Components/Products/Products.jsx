@@ -224,15 +224,15 @@ const Products = () => {
             {loading ? <Box className='loading'>
               <CircularProgress/>
               <h4>Loading Products...</h4>
-              </Box> : (products.length? <Grid container spacing={2} paddingX='12px' marginY='8px'>
-            {products.map(product=><Grid item xs={6} md={3} key={product.id}>
+              </Box> : (products.length? <Grid  container spacing={2} paddingX='12px' marginY='8px'>
+            {products.map(product=><Grid key={product.id} item xs={6} md={3} >
                   <ProductCard
                   product={product}
                   handleAddToCart={async () =>{
                     await addToCart(
                       token,
                       items,
-                      product,
+                      products,
                       product._id,
                       1,
                       { preventDuplicate: true }
