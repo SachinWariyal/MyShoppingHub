@@ -12,6 +12,8 @@
 }
 
 .header-title {
+    font-size: large;
+    color: rgb(109, 109, 168);
     cursor: pointer;
 }
 
